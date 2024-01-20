@@ -86,9 +86,7 @@ C00019 - 香港上海匯豐銀行有限公司                        936,705,108
 A00004 - CHINA SECURITIES DEPOSITORY AND CLEARING     984,757,499 (4.60%)    958,492,679 (4.48%)  -26,264,820 (-2.67%)
 ```
 
-### For Jupyter Notebook - ccass_search.ipynb 
-
-
+Alternative, you can use the Jupyter Notebook - [ccass_search.ipynb](ccass_search.ipynb).
 
 ## Reference Links
 
@@ -99,4 +97,4 @@ A00004 - CHINA SECURITIES DEPOSITORY AND CLEARING     984,757,499 (4.60%)    958
 
 MIT - a permissive free software license originating at the Massachusetts Institute of Technology (MIT), it puts only very limited restriction on reuse and has, therefore, an excellent license compatibility. It permits reuse within proprietary software provided that all copies of the licensed software include a copy of the MIT License terms and the copyright notice.
 
-Check the [LICENSE file](LICENSE) for more details.
+Check the [LICENSE file](../LICENSE) for more details.
