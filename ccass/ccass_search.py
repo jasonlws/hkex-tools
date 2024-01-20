@@ -72,10 +72,12 @@ if __name__ == "__main__":
         parser=argparse.ArgumentParser(
             formatter_class=argparse.RawDescriptionHelpFormatter,
             description=textwrap.dedent('''\
-                You can search for CCASS shareholding information in the past 12 months.
+                You can search and compare two dates of CCASS shareholding information from HKEX source.
+
+                example: python ccass_search.py -c 941 -s 2023/10/01 -e 2024/01/02 --lang c --sort change
 
                 Please provide following informaiton:
-                -------------------------------------------------
+                ------------------------------------------------------------------------------------------------------------
                 -c CODE               Stock Code (example: 1)
                 -s START              Shareholding Start Date (example: 2024/12/30)
                 -e END                Shareholding End Date (example: 2024/12/31)
@@ -91,8 +93,19 @@ if __name__ == "__main__":
                                         end: Shareholding End
                                         change: Shareholding Change
                                         change-percent: Shareholding Change Percent
+                ------------------------------------------------------------------------------------------------------------
                 '''),
-            epilog="And that's how you'd foo a bar"
+            epilog=textwrap.dedent('''\
+                License
+                ------------------------------------------------------------------------------------------------------------
+                MIT - a permissive free software license originating at the Massachusetts 
+                Institute of Technology (MIT), it puts only very limited restriction on 
+                reuse and has, therefore, an excellent license compatibility. It permits 
+                reuse within proprietary software provided that all copies of the licensed 
+                software include a copy of the MIT License terms and the copyright notice.
+
+                Check the LICENSE file (https://github.com/jasonlws/hkex-tools/blob/main/LICENSE) for more details.
+                ''')
         )
         parser.add_argument('-c', dest='code', required=True, type=validate_arg_code)
         parser.add_argument('-s', dest='start', required=True, type=validate_arg_start)
@@ -197,4 +210,4 @@ if __name__ == "__main__":
 
     except Exception as error:
 
-        print("An exception occurred:", error)
+        print("")
